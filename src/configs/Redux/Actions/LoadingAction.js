@@ -1,0 +1,2 @@
+export const ISLOADING_GET = 'ISLOADING_GET'
+export const ISLOADING_POST = 'ISLOADING_POST'
