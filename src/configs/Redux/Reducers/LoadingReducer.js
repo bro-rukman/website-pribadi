@@ -4,20 +4,20 @@ const initState = {
     isLoadingGet : false,
     isLoadingPost : false
 }
-const loadingReducer=(state=initState, action)=>{
+const LoadingReducer=(state=initState, action)=>{
     switch (action.type) {
         case ISLOADING_GET:
             return{
                 ...state,
-                isLoadingGet : state.isLoadingGet
+                isLoadingGet : action.value
             }
         case ISLOADING_POST:
             return{
                 ...state,
-                isLoadingPost : state.isLoadingPost
+                isLoadingPost : action.value
             }
         default:
             return state;
     }
 }
-export default loadingReducer
+export default LoadingReducer

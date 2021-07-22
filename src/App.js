@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import 'Assets/scss/style.scss'
 import PortfolioReact from './Pages/Portfolio'
-
 import {BrowserRouter as Router,Route, Switch } from 'react-router-dom'
 import PortfolioCss from './Pages/PortfolioCss'
 import LandingPage from 'Pages/LandingPage'
@@ -10,10 +9,12 @@ import Profile from './Pages/Profile'
 import Slides from 'Parts/Slides/Slides'
 import { Provider } from 'react-redux'
 import {store} from 'configs/Redux'
+import { connect } from 'react-redux'
 
 class App extends Component {
   render(){
     return (
+        <>
         <Provider store={store}>
             <Router>
                 <Switch>
@@ -26,8 +27,8 @@ class App extends Component {
                 </Switch>
             </Router>
         </Provider>
+        </>
     )
   }
 }
-
 export default App;
